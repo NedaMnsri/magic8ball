@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Magic 8-Ball</title>
+</head>
+
+<body>
+    <div class="magic-8-ball">
+        <img src="img/ball.png" alt="Magic 8-Ball" class="magic-8-ball-image">
+        <div class="answer" id="answer">Ask a question... <br>I anwser with magic</div>
+        <button onclick="shakeMagic8Ball()">Shake</button>
+    </div>
+    <script>
+        const answers = [
+            "Yes!",
+            "No.",
+            "Ask again later.",
+            "Outlook not so good.",
+            "Definitely.",
+            "Maybe.",
+            "It is certain.",
+            "Don't count on it.",
+            "Signs point to yes.",
+            "Absolutely!",
+            "My sources say no.",
+            "Very doubtful.",
+            "You're in luck!",
+            "Chances are slim.",
+            "Certainly!"
+        ];
+
+        function shakeMagic8Ball() {
+            const randomIndex = Math.floor(Math.random() * answers.length);
+            document.getElementById("answer").textContent = answers[randomIndex];
+        }
+
+    </script>
+</body>
+
+</html>
